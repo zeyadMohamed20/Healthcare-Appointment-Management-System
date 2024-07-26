@@ -21,7 +21,7 @@ private:
 	vector<MedicalRecord> medicalHistory;
 
 public:
-	Patient(string name, string email, string password, string PhoneNumber, string address, Role title);
+	Patient(string name, string email, string password, string PhoneNumber, string address);
 	void manageProfile(PatientProfile* profile);
 	PatientProfile* viewProfile();
 	vector<MedicalRecord> viewMedicalHistory();

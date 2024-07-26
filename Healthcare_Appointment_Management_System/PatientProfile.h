@@ -8,6 +8,19 @@
 
 using namespace std;
 
+typedef struct
+{
+	string name;
+	string email;
+	string password;
+	string PhoneNumber;
+	string address;
+	BloodType blood;
+	string gender;
+	double height;
+	double weight;
+	DateTime dateOfBirth;
+} PatientProfile_t;
 
 class PatientProfile: public Patient
 {
@@ -19,7 +32,7 @@ private:
 	DateTime dateOfBirth;
 
 public:
-	PatientProfile(string name, string email, string password, string PhoneNumber, string address, Role title, BloodType blood, string gender, double height, double weight, DateTime dateOfBirth);
+	PatientProfile(PatientProfile_t & profile);
 	void setBloodType(BloodType bloodType);
 	BloodType getBloodType();
 	void setGender(string gender);

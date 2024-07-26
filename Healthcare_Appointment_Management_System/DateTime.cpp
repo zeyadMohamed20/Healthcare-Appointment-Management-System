@@ -36,10 +36,10 @@ void DateTime::setTimeInfo(const tm& newTimeInfo) {
 
 bool DateTime::operator==(const DateTime& other) const 
 {
-    return timeInfo.tm_year == other.timeInfo.tm_year &&
-        timeInfo.tm_mon == other.timeInfo.tm_mon &&
-        timeInfo.tm_mday == other.timeInfo.tm_mday &&
-        timeInfo.tm_hour == other.timeInfo.tm_hour &&
-        timeInfo.tm_min == other.timeInfo.tm_min &&
-        timeInfo.tm_sec == other.timeInfo.tm_sec;
+    return (timeInfo.tm_year == other.timeInfo.tm_year &&\
+        timeInfo.tm_mon == other.timeInfo.tm_mon &&\
+        timeInfo.tm_mday == other.timeInfo.tm_mday &&\
+        timeInfo.tm_hour == other.timeInfo.tm_hour &&\
+        timeInfo.tm_min == other.timeInfo.tm_min &&\
+        timeInfo.tm_sec == other.timeInfo.tm_sec);
 }

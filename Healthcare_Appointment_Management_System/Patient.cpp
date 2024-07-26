@@ -5,14 +5,14 @@
 
 using namespace std;
 
-Patient::Patient(string name, string email, string password, string PhoneNumber, string address, Role title)
-	:User(name, email, password, PhoneNumber, address, title)
+Patient::Patient(string name, string email, string password, string PhoneNumber, string address)
+	:User(name, email, password, PhoneNumber, address, Role::patient)
 {
 }
 
 void Patient::manageProfile(PatientProfile* profile)
 {
-		this->profile = profile;
+	this->profile = profile;
 }
 
 PatientProfile* Patient::viewProfile()

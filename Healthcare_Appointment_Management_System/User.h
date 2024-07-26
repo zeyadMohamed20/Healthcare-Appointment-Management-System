@@ -10,8 +10,8 @@ using namespace std;
 class User
 {
 protected:
-		vector<User>usersDataBase;
-		static int userId;
+		static vector<User>usersDataBase;
+		int userId;
 		string name;
 		string email;
 		string password;
@@ -24,4 +24,5 @@ public:
 
 	bool login(string email, string password);
 	string getName();
+	int getId();
 };

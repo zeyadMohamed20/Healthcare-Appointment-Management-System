@@ -1,9 +1,8 @@
 #include "PatientProfile.h"
 #include "User.h"
 
-PatientProfile::PatientProfile(string name, string email, string password, string PhoneNumber, string address,
-	Role title,BloodType blood, string gender, double height, double weight, DateTime dateOfBirth):Patient(name,email,password,PhoneNumber,address,title),
-	bloodType(blood),gender(gender),height(height),weight(weight),dateOfBirth(dateOfBirth)
+PatientProfile::PatientProfile(PatientProfile_t & profile): Patient(profile.name, profile.email, profile.password, profile.PhoneNumber, profile.address),
+	bloodType(profile.blood), gender(profile.gender), height(profile.height), weight(profile.weight), dateOfBirth(profile.dateOfBirth)
 {
 }
 

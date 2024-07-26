@@ -5,7 +5,7 @@
 
 map<Specialty, vector<Doctor>> Doctor::doctorsDataBase;
 
-Doctor::Doctor(string name, string email, string password, string PhoneNumber, string address, Role title, Specialty field):User(name, email, password, PhoneNumber, address, title), field(field)
+Doctor::Doctor(string name, string email, string password, string PhoneNumber, string address, Specialty field):User(name, email, password, PhoneNumber, address, Role::doctor), field(field)
 {
 	doctorsDataBase[field].push_back(*this);
 	doctorId = (int)doctorsDataBase[field].size() - 1;
@@ -20,7 +20,7 @@ void Doctor::removeAppointment(DateTime& dateTime)
 {
     auto it = std::remove_if(schedule.begin(), schedule.end(),
         [&dateTime](const DateTime& dt) {
-            return dt == dateTime;
+            return (dt == dateTime);
         });
     if (it != schedule.end()) 
     {

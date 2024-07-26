@@ -7,6 +7,7 @@ private:
 	int adminId;
 
 public:
+	Admin(string name, string email, string password, string PhoneNumber, string address, Role title);
 	vector<User>viewAllUsers();
 	void deleteUser(User user);
 	void createUser(User user);

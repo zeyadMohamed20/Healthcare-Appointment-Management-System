@@ -1,7 +1,6 @@
 #include "User.h"
 
-int User::userId = 0;
-
+vector<User> User::usersDataBase;
 
 User::User(string name, string email, string password, string PhoneNumber, string address, Role title)
 	:name(name), email(email), password(password), PhoneNumber(PhoneNumber), address(address), title(title)
@@ -29,6 +28,10 @@ string User::getName()
 	return usersDataBase[this->userId].name;
 }
 
+int User::getId()
+{
+	return userId;
+}
 User::~User()
 {
 		// Destructor
